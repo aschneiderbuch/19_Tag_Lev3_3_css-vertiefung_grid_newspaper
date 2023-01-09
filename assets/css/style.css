@@ -327,6 +327,8 @@ aside>section {
     padding: 2vh 1vw;
 }
 
+
+/* **************** section mit Text "You add Here ************** */
 aside>section:nth-of-type(1)>p:nth-of-type(1) {
     font-size: 2.7rem;
     font-weight: bold;
@@ -474,6 +476,41 @@ p {
 .secImg>img{
     width: 100%;
 }
+
+
+
+
+
+
+
+
+/* ********************** aside ********************  */
+aside {
+    flex-direction: row;        /* * dadurch sections nebeneinander */
+    justify-content: space-around; /* * dadurch Platz zwischen rahmen */
+    flex-wrap: wrap;        /* * umbruch und auch untereinander */
+}
+
+
+aside>h4{
+    font-size: 2.5rem;
+    width: 100%;    /* * dadurch ist Überschrift über den Flex
+                        * sections und nicht im flow */
+}
+
+
+
+
+/* * alle 3 Sections in aside werden ausgerichtet und mit höhe versehen */
+aside>section {
+    width: 45%;    /* * dadurch Platz zwischen den Rahmen */
+}
+
+
+/* **************** section mit Text "You add Here ************** */
+
+aside>section:nth-of-type(1)>p:nth-of-type(1) {
+padding-top:  4vh;
 
 
 
