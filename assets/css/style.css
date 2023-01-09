@@ -194,7 +194,7 @@ main {
         " sec3 sec4 secImg aside"
         " sec5 sec6 secImg aside"
     ;
-    row-gap: 10px;
+    row-gap: 10px;          /* * beeinflusst Margin h2 bottom und Abstand Zeilen */
     column-gap: 20px;
     /* * damit das Küchen Bild besser rein passt */
 
@@ -408,7 +408,7 @@ main {
 
     grid-template-columns: 1fr 1fr;
 
-    grid-template-rows: 10% 15% 30% 1fr 1fr 1fr;
+    grid-template-rows: 10% 15% 30% 1fr 1fr 1fr;  
 
     grid-template-areas: 
     " h2 h2"
@@ -417,10 +417,38 @@ main {
     " sec5 sec6 "
     " secImg secImg"
     " aside aside"
-    
-    
-    
+   
     ;
+
+    row-gap: 25px;    /* * h2 bekommt mehr Abstand zu Text
+                    * section Zeilen Abstand wird größer
+                    * wirkt nicht mehr so gequetscht */
+}
+
+
+
+
+
+/* ***************** h2 Grid Überschrift Burning ***** */
+
+h2{
+    font-size: 2.3rem;
+
+}
+
+
+
+
+
+
+/* ****************** h3 von Sections in Grid und    aside    *************** */
+
+/* * Vorsicht formatiert auch h3 be aside mit */
+
+h3{
+    font-size: 2rem;
+
+
 }
 
 
@@ -429,6 +457,11 @@ main {
 
 
 
+/* ****************** p von Sections in Grid und     aside ************ */
+
+p {
+    font-size: 1.1rem;
+}
 
 
 
@@ -436,10 +469,11 @@ main {
 
 
 
+/* ****************** Bild von Küche ************ */
 
-
-
-
+.secImg>img{
+    width: 100%;
+}
 
 
 
