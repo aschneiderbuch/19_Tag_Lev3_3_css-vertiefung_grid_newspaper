@@ -21,7 +21,7 @@ font-family: SchriftNormal, sans-serif;
 
 
 @font-face {
-    font-family: SchriftDick ;
+    font-family: SchriftDick;
     src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-Bold.ttf");
 }
 
@@ -47,22 +47,25 @@ font-family: SchriftNormal, sans-serif;
 
 /* ******************* Schriften den Texten zuweisen ************* */
 
-h1{
-    font-family: SchriftDickSchräg, sans-serif;  
+h1 {
+    font-family: SchriftDickSchräg, sans-serif;
 }
 
 
-h2, h3, h4{
-    font-family: SchriftDick, sans-serif;  
+h2,
+h3,
+h4 {
+    font-family: SchriftDick, sans-serif;
 }
 
-figcaption{
-    font-family: SchriftSchräg, sans-serif;  
+/* * Bildunterschrift */
+figcaption {
+    font-family: SchriftSchräg, sans-serif;
 }
 
-p{
-    font-family: SchriftNormal, sans-serif;  
-    font-size: 0.6rem;
+/* * p = header p + section p + aside p */
+p {
+    font-family: SchriftNormal, sans-serif;
 }
 
 
@@ -86,7 +89,7 @@ p{
 
 
 /* ***************** html **************** */
-html{
+html {
     font-size: 16px;
     max-width: 1440px;
     scroll-behavior: smooth;
@@ -97,10 +100,10 @@ html{
 
 /* ***************** img *************** */
 /* * nur damit am Anfang die Bilder nicht zu groß sind und alles verzerren */
-img {
+/* img {
     width: 300px;
 }
-
+ */
 
 
 
@@ -111,10 +114,10 @@ img {
 
 
 
-body{
-background-color: rgb(233, 233, 224) ;
-color: #333;
-padding: 5vh 2vw 5vh 5vw;
+body {
+    background-color: rgb(233, 233, 224);
+    color: #333;
+    padding: 2vh 2vw 2vh 5vw;
 }
 
 
@@ -126,24 +129,32 @@ padding: 5vh 2vw 5vh 5vw;
 /* **************** header ****************** */
 /* **************** header ****************** */
 
-header{
-    height: 15vh;
+header {
+    height: 13vh;
     background-color: red;
-text-align: center;
-font-size: 1.5rem;
-text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
-header>section{
+header>section {
     background-color: aqua;
     display: flex;
     justify-content: space-around;
-    margin-top: 2vh;
-    border: 2px double black;
+    margin-top: 1vh;
     padding: 0.5vh;
     font-size: 1.1rem;
 }
 
+header>section>p{
+    font-size: 1.1rem;
+
+}
+
+/* * Vorsicht   macht Rahmen in Header    und  bei 3 Sections in   aside */
+.doppelRahmen{
+    border: 2px double black;
+}
 
 
 
@@ -152,27 +163,38 @@ header>section{
 /* **************** main ****************** */
 /* **************** main ****************** */
 
-main{
+
+
+
+
+
+
+/* ************* Grid Style Start ************ */
+main {
     background-color: rgb(247, 129, 129);
-    height: 75vh;
+    height: 83vh;
     display: grid;
 
-    grid-template-columns: 1fr 1fr 2fr 1fr;   /* * 4 Spalten */
-    grid-template-rows: 10% 20% 40% 1fr;       /* * 4 Zeilen */
+    /* * Vorsicht Bild bei figuare Img Küche ist zu klein und müsste
+    * verzerrt werden, damit es ganze Spalte 3 ausfüllt,
+        * deshalb Spalte 1+2 größer mit 1.2fr und Spalte 3 
+        * kleiner mit 1.8 fr gemacht  
+        * vorher war es 1fr 1fr 2fr 1fr    ;-( */
+    grid-template-columns: 1.2fr 1.2fr 1.8fr 1fr;   
+    /* * 4 Spalten */
+    grid-template-rows: 10% 15% 30% 1fr;
+    /* * 4 Zeilen */
 
-    grid-template-areas: 
-    " h2 h2 h2 aside"
-    " sec1 sec2 secImg aside"
-    " sec3 sec4 secImg aside"
-    " sec5 sec6 secImg aside"
-        ;
+    grid-template-areas:
+        " h2 h2 h2 aside"
+        " sec1 sec2 secImg aside"
+        " sec3 sec4 secImg aside"
+        " sec5 sec6 secImg aside"
+    ;
 }
 
 
-h2{
-    background-color: orange;
-    grid-area: h2;
-}
+
 
 
 .sec1cookware {
@@ -206,11 +228,74 @@ h2{
 }
 
 .secImg {
-    background-color: orchid;
-    grid-area: secImg;
+/*     background-color: orchid;
+ */    grid-area: secImg;
 }
 
 .aside {
     background-color: rebeccapurple;
     grid-area: aside;
+}
+
+/* ************* Grid Style Ende ************ */
+
+
+
+
+
+
+
+
+/* ***************** h2 Grid Überschrift Burning ***** */
+
+h2 {
+    background-color: orange;
+    grid-area: h2;
+font-size: 2rem;
+text-align: center;             /* * text in der Mitte links rechts */
+margin: auto 0;                 /* * text in der Mitte von oben und Unten */
+}
+
+
+
+
+
+
+/* ****************** h3 von Sections in Grid und    aside    *************** */
+
+/* * Vorsicht formatiert auch h3 be aside mit */
+h3 {
+    font-size: 1.5rem;
+}
+
+
+
+/* ****************** p von Sections in Grid und     aside ************ */
+p {
+    font-size: 1rem;         /* * max größe bevor es aus Rahmen geht
+                                    * bzw. alles größer als 100vh wird
+                                    * wenn man sagt das Zeitung nur eine Seiten sein soll */
+
+}
+
+
+
+
+
+/* ****************** Bild von Küche ************ */
+
+
+.secImg>img { 
+    width: 100%;             /* * Problem  Bild zu schmal 
+                            * Problem das Seite ja nur eine Seite sein soll */
+
+}
+
+
+
+
+
+
+aside>article>img {
+    width: 300px;
 }
