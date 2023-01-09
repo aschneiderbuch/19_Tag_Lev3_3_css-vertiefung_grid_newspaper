@@ -131,21 +131,18 @@ body {
 
 header {
     height: 13vh;
-    background-color: red;
     text-align: center;
     font-size: 1rem;
     text-decoration: none;
 }
 
-header>h1>span{
-    background-color: yellow;
+header>h1>span {
     font-size: 3rem;
 
-    
+
 }
 
 header>section {
-    background-color: aqua;
     display: flex;
     justify-content: space-around;
     margin-top: 1vh;
@@ -153,13 +150,13 @@ header>section {
     font-size: 1.1rem;
 }
 
-header>section>p{
+header>section>p {
     font-size: 1.1rem;
 
 }
 
 /* * Vorsicht   macht Rahmen in Header    und  bei 3 Sections in   aside */
-.doppelRahmen{
+.doppelRahmen {
     border: 2px double black;
 }
 
@@ -178,7 +175,6 @@ header>section>p{
 
 /* ************* Grid Style Start ************ */
 main {
-    background-color: rgb(247, 129, 129);
     height: 83vh;
     display: grid;
 
@@ -187,7 +183,7 @@ main {
         * deshalb Spalte 1+2 größer mit 1.2fr und Spalte 3 
         * kleiner mit 1.8 fr gemacht  
         * vorher war es 1fr 1fr 2fr 1fr    ;-( */
-    grid-template-columns: 1.2fr 1.2fr 1.8fr 1fr;   
+    grid-template-columns: 1.2fr 1.2fr 1.8fr 1fr;
     /* * 4 Spalten */
     grid-template-rows: 10% 15% 30% 1fr;
     /* * 4 Zeilen */
@@ -198,8 +194,9 @@ main {
         " sec3 sec4 secImg aside"
         " sec5 sec6 secImg aside"
     ;
-row-gap: 10px;
-column-gap: 20px;           /* * damit das Küchen Bild besser rein passt */
+    row-gap: 10px;
+    column-gap: 20px;
+    /* * damit das Küchen Bild besser rein passt */
 
 }
 
@@ -208,42 +205,34 @@ column-gap: 20px;           /* * damit das Küchen Bild besser rein passt */
 
 
 .sec1cookware {
-    background-color: green;
     grid-area: sec1;
 }
 
 .sec2microwave {
-    background-color: yellow;
     grid-area: sec2;
 }
 
 .sec3knifeCut {
-    background-color: blueviolet;
     grid-area: sec3;
 }
 
 .sec4cooking {
-    background-color: antiquewhite;
     grid-area: sec4;
 }
 
 .sec5contact {
-    background-color: greenyellow;
     grid-area: sec5;
 }
 
 .sec6death {
-    background-color: olivedrab;
     grid-area: sec6;
 }
 
 .secImg {
-/*     background-color: orchid;
- */    grid-area: secImg;
+    grid-area: secImg;
 }
 
 .aside {
-    background-color: rebeccapurple;
     grid-area: aside;
 }
 
@@ -259,11 +248,12 @@ column-gap: 20px;           /* * damit das Küchen Bild besser rein passt */
 /* ***************** h2 Grid Überschrift Burning ***** */
 
 h2 {
-    background-color: orange;
     grid-area: h2;
-font-size: 2rem;
-text-align: center;             /* * text in der Mitte links rechts */
-margin: auto 0;                 /* * text in der Mitte von oben und Unten */
+    font-size: 2rem;
+    text-align: center;
+    /* * text in der Mitte links rechts */
+    margin: auto 0;
+    /* * text in der Mitte von oben und Unten */
 }
 
 
@@ -282,7 +272,8 @@ h3 {
 
 /* ****************** p von Sections in Grid und     aside ************ */
 p {
-    font-size: 0.91rem;         /* * max größe bevor es aus Rahmen geht
+    font-size: 0.91rem;
+    /* * max größe bevor es aus Rahmen geht
                                     * bzw. alles größer als 100vh wird
                                     * wenn man sagt das Zeitung nur eine Seiten sein soll */
 
@@ -295,8 +286,9 @@ p {
 /* ****************** Bild von Küche ************ */
 
 
-.secImg>img { 
-    width: 98%;             /* * Problem  Bild zu schmal 
+.secImg>img {
+    width: 98%;
+    /* * Problem  Bild zu schmal 
                             * Problem das Seite ja nur eine Seite sein soll */
 
 }
@@ -313,54 +305,55 @@ p {
 
 /* ********************** aside ********************  */
 
-aside{
+aside {
 
     display: flex;
     flex-direction: column;
-    
+
 
     padding-top: 2vh;
-    
+
     text-align: center;
 }
 
-aside>h4{
-    background-color: red;
+aside>h4 {
     font-size: 1.5rem;
 }
+
 /* * alle 3 Sections in aside werden ausgerichtet und mit höhe versehen */
-aside>section{
-   height: 25vh;
-   margin: 1.1vh 0;
-   padding: 2vh 1vw;
+aside>section {
+    height: 25vh;
+    margin: 1.1vh 0;
+    padding: 2vh 1vw;
 }
 
-aside>section:nth-of-type(1)>p:nth-of-type(1){
-background-color: greenyellow;
-font-size: 2.7rem;
-font-weight: bold;
-font-family: SchriftDick, sans-serif;
+aside>section:nth-of-type(1)>p:nth-of-type(1) {
+    font-size: 2.7rem;
+    font-weight: bold;
+    font-family: SchriftDick, sans-serif;
 
 }
 
-aside>section:nth-of-type(2)>p:nth-of-type(1){
-    background-color: yellow;
-}
+/* aside>section:nth-of-type(2)>p:nth-of-type(1){
+} */
 
-aside>section:nth-of-type(2)>p:nth-of-type(2){
-    background-color: orange;
+aside>section:nth-of-type(2)>p:nth-of-type(2) {
     font-size: 1.2rem;
     text-decoration: underline;
     text-underline-position: under;
     margin-top: 0.5vh;
 }
 
-aside>section:nth-of-type(3){
+aside>section:nth-of-type(3) {
     background-image: url("../img/ikea-logo.png");
-    background-size: contain;           /* * damit es nicht verzerrt ist */
-    background-repeat: no-repeat;       /* * damit es nur 1x da ist */
-    background-position: center;        /* * damit es Mittig ist */
-    background-clip: content-box;       /* * damit ein padding entsteht */
+    background-size: contain;
+    /* * damit es nicht verzerrt ist */
+    background-repeat: no-repeat;
+    /* * damit es nur 1x da ist */
+    background-position: center;
+    /* * damit es Mittig ist */
+    background-clip: content-box;
+    /* * damit ein padding entsteht */
 }
 
 
@@ -374,8 +367,3 @@ aside>section:nth-of-type(3){
 
 
 
-
-
-aside>section>img {
-    width: 100px;
-}
