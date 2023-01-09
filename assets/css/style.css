@@ -1,3 +1,15 @@
+/* ************ Schriften zum Einfügen ******** */
+/* 
+font-family: SchriftDick, sans-serif;  
+
+font-family: SchriftDickSchräg, sans-serif;  
+
+font-family: SchriftSchräg, sans-serif;  
+
+ */
+
+/* ****************** Browser default Style auf 0 setzen ***********+ */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +17,37 @@
 }
 
 
+
+
+
+/* ****************** font Family einbinden *********** */
+@font-face {
+    font-family: SchriftDick ;
+    src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-Bold.ttf");
+}
+
+@font-face {
+    font-family: SchriftDickSchräg;
+    src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: SchriftSchräg;
+    src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-Italic.ttf");
+}
+
+
+
+
+
+
+
+/* ***************** html **************** */
+html{
+    font-size: 16px;
+    max-width: 1440px;
+    scroll-behavior: smooth;
+}
 
 
 /* ***************** img *************** */
