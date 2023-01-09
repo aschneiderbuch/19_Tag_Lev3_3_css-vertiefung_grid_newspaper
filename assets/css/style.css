@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+
+
+
+/* ***************** img *************** */
+/* * nur damit am Anfang die Bilder nicht zu groß sind und alles verzerren */
+img {
+    width: 300px;
+}
+
+/* ***************** body ***************** */
+
+
 body{
 background-color: rgb(233, 233, 224) ;
 color: #333;
