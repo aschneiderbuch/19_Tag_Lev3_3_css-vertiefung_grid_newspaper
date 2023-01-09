@@ -22,7 +22,7 @@ font-family: SchriftNormal, sans-serif;
 
 @font-face {
     font-family: SchriftDick;
-    src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-Bold.ttf");
+    src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-SemiBold.ttf");
 }
 
 @font-face {
@@ -133,8 +133,15 @@ header {
     height: 13vh;
     background-color: red;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
+}
+
+header>h1>span{
+    background-color: yellow;
+    font-size: 3rem;
+
+    
 }
 
 header>section {
