@@ -191,6 +191,9 @@ main {
         " sec3 sec4 secImg aside"
         " sec5 sec6 secImg aside"
     ;
+row-gap: 10px;
+column-gap: 20px;           /* * damit das Küchen Bild besser rein passt */
+
 }
 
 
@@ -272,7 +275,7 @@ h3 {
 
 /* ****************** p von Sections in Grid und     aside ************ */
 p {
-    font-size: 1rem;         /* * max größe bevor es aus Rahmen geht
+    font-size: 0.91rem;         /* * max größe bevor es aus Rahmen geht
                                     * bzw. alles größer als 100vh wird
                                     * wenn man sagt das Zeitung nur eine Seiten sein soll */
 
@@ -286,7 +289,7 @@ p {
 
 
 .secImg>img { 
-    width: 100%;             /* * Problem  Bild zu schmal 
+    width: 98%;             /* * Problem  Bild zu schmal 
                             * Problem das Seite ja nur eine Seite sein soll */
 
 }
@@ -296,6 +299,76 @@ p {
 
 
 
-aside>article>img {
-    width: 300px;
+
+
+
+
+
+/* ********************** aside ********************  */
+
+aside{
+
+    display: flex;
+    flex-direction: column;
+    
+
+    padding-top: 2vh;
+    
+    text-align: center;
+}
+
+aside>h4{
+    background-color: red;
+    font-size: 1.5rem;
+}
+/* * alle 3 Sections in aside werden ausgerichtet und mit höhe versehen */
+aside>section{
+   height: 25vh;
+   margin: 1.1vh 0;
+   padding: 2vh 1vw;
+}
+
+aside>section:nth-of-type(1)>p:nth-of-type(1){
+background-color: greenyellow;
+font-size: 2.7rem;
+font-weight: bold;
+font-family: SchriftDick, sans-serif;
+
+}
+
+aside>section:nth-of-type(2)>p:nth-of-type(1){
+    background-color: yellow;
+}
+
+aside>section:nth-of-type(2)>p:nth-of-type(2){
+    background-color: orange;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-top: 0.5vh;
+}
+
+aside>section:nth-of-type(3){
+    background-image: url("../img/ikea-logo.png");
+    background-size: contain;           /* * damit es nicht verzerrt ist */
+    background-repeat: no-repeat;       /* * damit es nur 1x da ist */
+    background-position: center;        /* * damit es Mittig ist */
+    background-clip: content-box;       /* * damit ein padding entsteht */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aside>section>img {
+    width: 100px;
 }
