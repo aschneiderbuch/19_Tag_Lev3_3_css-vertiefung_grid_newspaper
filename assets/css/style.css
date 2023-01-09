@@ -6,21 +6,20 @@ font-family: SchriftDickSchräg, sans-serif;
 
 font-family: SchriftSchräg, sans-serif;  
 
+font-family: SchriftNormal, sans-serif;  
+
  */
 
-/* ****************** Browser default Style auf 0 setzen ***********+ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 
 
 
 
 /* ****************** font Family einbinden *********** */
+
+
 @font-face {
     font-family: SchriftDick ;
     src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-Bold.ttf");
@@ -36,6 +35,49 @@ font-family: SchriftSchräg, sans-serif;
     src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-Italic.ttf");
 }
 
+@font-face {
+    font-family: SchriftNormal;
+    src: url("/assets/fonts/Cormorant_Garamond_1/CormorantGaramond-Light.ttf");
+}
+
+
+
+
+
+
+/* ******************* Schriften den Texten zuweisen ************* */
+
+h1{
+    font-family: SchriftDickSchräg, sans-serif;  
+}
+
+
+h2, h3, h4{
+    font-family: SchriftDick, sans-serif;  
+}
+
+h5{
+    font-family: SchriftSchräg, sans-serif;  
+}
+
+p{
+    font-family: SchriftNormal, sans-serif;  
+}
+
+
+
+
+
+/* ****************** Browser default Style auf 0 setzen ***********+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 
 
 
@@ -50,16 +92,34 @@ html{
 }
 
 
+
+
 /* ***************** img *************** */
 /* * nur damit am Anfang die Bilder nicht zu groß sind und alles verzerren */
 img {
     width: 300px;
 }
 
+
+
+
+
 /* ***************** body ***************** */
+/* ***************** body ***************** */
+/* ***************** body ***************** */
+
 
 
 body{
 background-color: rgb(233, 233, 224) ;
 color: #333;
 }
+
+
+
+
+
+
+/* **************** header ****************** */
+/* **************** header ****************** */
+/* **************** header ****************** */
